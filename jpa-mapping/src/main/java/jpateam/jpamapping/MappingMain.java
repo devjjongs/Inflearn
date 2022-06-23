@@ -48,6 +48,7 @@ public class MappingMain {
             findMember.setTeam(newTeam);
             // 커밋(커밋하는 순간 insert sql을 DB에 전달)
             tx.commit();
+
         } catch (Exception e) {
             // 롤백
             tx.rollback();
