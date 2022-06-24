@@ -24,7 +24,13 @@ public class JpaMain {
         try {
 
             Order order = new Order();
-            order.addOrderIten(new OrderItem());
+//            order.addOrderItem(new OrderItem());
+            em.persist(order);
+
+            OrderItem orderItem = new OrderItem();
+            orderItem.setOrder(order);
+
+            em.persist(orderItem);
 
             // 커밋(커밋하는 순간 insert sql을 DB에 전달)
             tx.commit();
