@@ -1,5 +1,8 @@
 package jpabook.jpashop;
 
+import jpabook.jpashop.domain.Order;
+import jpabook.jpashop.domain.OrderItem;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -19,6 +22,9 @@ public class JpaMain {
         tx.begin();
 
         try {
+
+            Order order = new Order();
+            order.addOrderIten(new OrderItem());
 
             // 커밋(커밋하는 순간 insert sql을 DB에 전달)
             tx.commit();

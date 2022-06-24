@@ -13,7 +13,6 @@ public class Item {
     private int stockQuantity;
 
     // Getter, Setter
-
     public Long getId() {
         return id;
     }
