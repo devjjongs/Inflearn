@@ -10,40 +10,42 @@ import javax.persistence.Persistence;
 
 public class JpaMain {
     public static void main(String[] args) {
-        // 변수를 받으면 emf 반환
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
+//        // 변수를 받으면 emf 반환
+//        EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
+//
+//        // EntityManager 생성
+//        EntityManager em = emf.createEntityManager();
+//
+//        // Transacrion 생성
+//        EntityTransaction tx = em.getTransaction();
+//        // Transacrion 시작
+//        tx.begin();
+//
+//        try {
+//
+//            Order order = new Order();
+////            order.addOrderItem(new OrderItem());
+//            em.persist(order);
+//
+//            OrderItem orderItem = new OrderItem();
+//            orderItem.setOrder(order);
+//
+//            em.persist(orderItem);
+//
+//            // 커밋(커밋하는 순간 insert sql을 DB에 전달)
+//            tx.commit();
+//        } catch (Exception e) {
+//            // 롤백
+//            tx.rollback();
+//
+//        } finally {
+//            // EntityManager 종료
+//            em.close();
+//        }
+//
+//        // EntityManagerFactory 종료
+//        emf.close();
 
-        // EntityManager 생성
-        EntityManager em = emf.createEntityManager();
-
-        // Transacrion 생성
-        EntityTransaction tx = em.getTransaction();
-        // Transacrion 시작
-        tx.begin();
-
-        try {
-
-            Order order = new Order();
-//            order.addOrderItem(new OrderItem());
-            em.persist(order);
-
-            OrderItem orderItem = new OrderItem();
-            orderItem.setOrder(order);
-
-            em.persist(orderItem);
-
-            // 커밋(커밋하는 순간 insert sql을 DB에 전달)
-            tx.commit();
-        } catch (Exception e) {
-            // 롤백
-            tx.rollback();
-
-        } finally {
-            // EntityManager 종료
-            em.close();
-        }
-
-        // EntityManagerFactory 종료
-        emf.close();
+        System.out.println("world");
     }
 }
