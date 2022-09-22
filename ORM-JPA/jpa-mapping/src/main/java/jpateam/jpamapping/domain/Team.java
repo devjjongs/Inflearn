@@ -13,7 +13,7 @@ public class Team {
 
     private String name;
 
-    @OneToMany(mappedBy = "team")
+    @OneToMany(mappedBy = "team") // team에 의해 맵핑됨
     private List<Member> members = new ArrayList<>();
 
     // Getter, Setter
